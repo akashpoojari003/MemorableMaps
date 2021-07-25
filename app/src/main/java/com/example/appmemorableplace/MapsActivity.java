@@ -45,6 +45,8 @@ import java.util.Locale;
             mMap.clear();
             mMap.addMarker(new MarkerOptions().position(userLocation).title(title));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation, 10));
+        }else{
+            Toast.makeText(this, "Failed to load your location", Toast.LENGTH_SHORT).show();
         }
     }
 
